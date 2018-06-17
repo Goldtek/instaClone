@@ -1,4 +1,6 @@
 apply plugin: "com.android.application"
+apply plugin: 'io.fabric'
+
 
 import com.android.build.OutputFile
 
@@ -141,7 +143,7 @@ dependencies {
     def googlePlayServicesVersion = rootProject.hasProperty('googlePlayServicesVersion')  ? rootProject.googlePlayServicesVersion : DEFAULT_GOOGLE_PLAY_SERVICES_VERSION
     def supportLibVersion = rootProject.hasProperty('supportLibVersion')  ? rootProject.supportLibVersion : DEFAULT_SUPPORT_LIBRARY_VERSION
     
-    compile project(':react-native-vector-icons')
+    implementation project(':react-native-vector-icons')
     compile(project(':react-native-firebase')) {
         transitive = false
     }
