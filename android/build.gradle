@@ -3,11 +3,16 @@
 buildscript {
     repositories {
         jcenter()
-         google()
+        google()
+        maven {
+            url 'https://maven.fabric.io/public'
+        }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.3'
-
+        classpath 'com.android.tools.build:gradle:3.1.2'
+        classpath 'com.google.gms:google-services:4.0.0'
+        classpath 'com.google.firebase:firebase-plugins:1.1.5'
+        classpath 'io.fabric.tools:gradle:1.25.1'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
@@ -22,5 +27,25 @@ allprojects {
             url "$rootDir/../node_modules/react-native/android"
         }
          google()
+    }
+}
+
+ext {
+    compileSdkVersion           = 27
+    targetSdkVersion            = 26
+    buildToolsVersion           = "27.0.3"
+    googlePlayServicesVersion   = "15.0.0"
+    supportLibVersion           = "27.0.2"
+    gradle3EXPERIMENTAL         = true
+}
+
+subprojects {
+    afterEvaluate {project ->
+        if (project.hasProperty("android")) {
+            android {
+                compileSdkVersion 27
+                buildToolsVersion '27.0.3'
+            }
+        }
     }
 }

@@ -1,0 +1,81 @@
+{
+  "project_info": {
+    "project_number": "384588849485",
+    "firebase_url": "https://instacha-16638.firebaseio.com",
+    "project_id": "instacha-16638",
+    "storage_bucket": "instacha-16638.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:384588849485:android:7428603b3135ccde",
+        "android_client_info": {
+          "package_name": "com.instachat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "384588849485-i5hkr4m5uvr6s9b1mlocj6pca1loqo86.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "384588849485-i5hkr4m5uvr6s9b1mlocj6pca1loqo86.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3uYVbjHMhALKWqoNqQinM6QUF52jklVk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:384588849485:android:a0db80d86aaedf9c",
+        "android_client_info": {
+          "package_name": "com.instaclone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "384588849485-i5hkr4m5uvr6s9b1mlocj6pca1loqo86.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "384588849485-i5hkr4m5uvr6s9b1mlocj6pca1loqo86.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3uYVbjHMhALKWqoNqQinM6QUF52jklVk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
