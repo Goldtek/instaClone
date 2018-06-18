@@ -12,7 +12,7 @@ import {
   View
 } from 'react-native';
 import { SharedElement, SharedElementRenderer } from 'react-native-motion';
-
+import { Main } from './src/components';
 
 
 
@@ -20,17 +20,7 @@ export default class App extends Component {
   render() {
     return (
       <SharedElementRenderer>
-        <View style={styles.container}>
-          <Text style={styles.welcome}>
-            Welcome to React Native!
-          </Text>
-          <Text style={styles.instructions}>
-            To get started, edit App.js
-          </Text>
-          <Text style={styles.instructions}>
-            Hello im Chisom Dike Welcome to react native
-          </Text>
-        </View>
+        <Main />
       </SharedElementRenderer>
     );
   }
