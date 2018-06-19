@@ -7,7 +7,7 @@ import styles from '../styles/style';
 
 const img1 = require('../../assets/images/01.jpg');
 const Post = ({ item, index }) => (
-    <View style={{ flex: 1 }}>
+    <View>
         <View style={styles.postHeader}>
             <View style={styles.postLeftHeader}>
                 <Image source={{uri : item.picture.thumbnail }} style={styles.creator} />

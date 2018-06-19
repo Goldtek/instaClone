@@ -35,7 +35,7 @@ export default StyleSheet.create({
   },
 
   postContent: {
-    flex: 1,
+    
   },
 
   postImage: {

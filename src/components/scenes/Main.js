@@ -32,7 +32,7 @@ export default class Main extends Component {
          this.setState({ data: results, loading:false });
     }
     capture = () => {
-        console.log('capture')
+        console.log('capture');
     }
 
     addPerson = () => {

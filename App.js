@@ -12,14 +12,14 @@ import {
   View
 } from 'react-native';
 import { SharedElement, SharedElementRenderer } from 'react-native-motion';
-import { Main } from './src/components';
+import Navigator from './src/Navigation';
 
 
 
 export default class App extends Component {
   render() {
     return (
-        <Main />
+        <Navigator />
     );
   }
 }
