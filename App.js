@@ -19,9 +19,7 @@ import { Main } from './src/components';
 export default class App extends Component {
   render() {
     return (
-      <SharedElementRenderer>
         <Main />
-      </SharedElementRenderer>
     );
   }
 }

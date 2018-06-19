@@ -1,5 +1,7 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Dimensions } from "react-native";
 import colors, { darkBlack, lightBlack } from "./colors";
+
+const { width } = Dimensions.get('window');
 
 export default StyleSheet.create({
   divider: {
@@ -15,10 +17,36 @@ export default StyleSheet.create({
     borderBottomColor: "#e9e9e9",
     flexDirection: 'row',
     alignItems: 'center',
-    paddingHorizontal: 6,
+    paddingHorizontal: 10,
+    height: 45,
   },
-  icon: {
-      width: 30,
-      color: colors.badge,
+  postHeader: {
+    height: 40,
+    flexDirection:'row',
+    alignItems: 'flex-end',
+    paddingHorizontal: 16,
+    justifyContent: 'space-between',
+    marginVertical: 10,
+  },
+  postLeftHeader: {
+    flexDirection: 'row',
+     alignItems: 'flex-end', 
+     justifyContent: 'space-between',
+  },
+
+  postContent: {
+    flex: 1,
+  },
+
+  postImage: {
+    width,
+    height: width,
+    resizeMode: 'contain',
+  },
+
+  creator: {
+    height: 30,
+    width: 30,
+    borderRadius: 30
   }
 });
