@@ -44,6 +44,16 @@ export default StyleSheet.create({
     resizeMode: 'contain',
   },
 
+  postFooter: {
+    paddingVertical: 10,
+
+  },
+  groupIcon: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingHorizontal: 10,
+  },
+
   creator: {
     height: 30,
     width: 30,

@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, Image } from 'react-native';
+import IconC from 'react-native-vector-icons/Ionicons';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import { Paper } from 'react-native-paper';
 
 import styles from '../styles/style';
 
@@ -18,7 +18,19 @@ const Post = ({ item, index }) => (
         <View style={styles.postContent}>
             <Image source={img1} style={styles.postImage} />
         </View>
-        <View>
+        <View style={styles.postFooter}>
+            <View style={styles.groupIcon}>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
+                    <IconC size={26} name='md-heart-outline' color="black"  />  
+                    <IconC size={26} name='ios-chatbubbles-outline' color="black" style={{ marginLeft: 10 }} />  
+                    <IconC size={26} name='ios-send-outline'  color="black" style={{ marginLeft: 10 }} />  
+                </View>
+                <IconC size={26} name='ios-bookmark-outline' onPress={this.addPerson} color="black"  />
+            </View>  
+            <View style={{ flexDirection: 'row', paddingLeft: 10, marginVertical: 10 }}>
+            <IconC size={20} name='md-heart' color="black"  />  
+                <Text> 15 Likes </Text>
+            </View>
         </View>
     </View>   
 );
