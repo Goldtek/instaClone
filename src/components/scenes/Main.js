@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, TextInput, TouchableOpacity, ActivityIndicator, FlatList, ScrollView } from 'react-native';
+import { View, TextInput, TouchableOpacity, ActivityIndicator, FlatList, ScrollView, Dimensions } from 'react-native';
 import {  Text } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import IconC from 'react-native-vector-icons/Ionicons';
@@ -11,6 +11,7 @@ import colors from '../styles/colors';
 import Status from '../custom/status';
 import Post from '../custom/post';
 
+const { width } = Dimensions.get('window');
 
 export default class Main extends Component {
 
@@ -77,6 +78,7 @@ export default class Main extends Component {
                             keyExtractor={(item, index )=> String(index)}
                             ListEmptyComponent={this._renderEmptyList()}
                             refreshing  
+                            contentContainerStyle={{ paddingBottom: width - 50 }}
                         />
                      </View>   
                 ) :
