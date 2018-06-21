@@ -5,7 +5,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import { 
     Main,
-    Camera,
+    CameraClass,
     Favorite,
     Gallery,
     Profile,
@@ -41,7 +41,7 @@ export default createBottomTabNavigator({
         }
     },
     Camera: { 
-        screen: Camera,
+        screen: CameraClass,
         navigationOptions: {
             tabBarLabel: ' ',
             tabBarIcon: ({ tintColor }) => (

@@ -1,7 +1,7 @@
 import { StyleSheet, Dimensions } from "react-native";
 import colors, { darkBlack, lightBlack } from "./colors";
 
-const { width } = Dimensions.get('window');
+const { width, height } = Dimensions.get('window');
 
 export default StyleSheet.create({
   divider: {
@@ -58,5 +58,20 @@ export default StyleSheet.create({
     height: 30,
     width: 30,
     borderRadius: 30
-  }
+  },
+  preview: {
+    flex: 1,
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+    height,
+    width,
+ },
+ capture: {
+    flex: 0,
+    backgroundColor: '#fff',
+    borderRadius: 5,
+    color: '#000',
+    padding: 10,
+    margin: 40
+ }
 });
