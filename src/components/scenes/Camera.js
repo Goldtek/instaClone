@@ -1,41 +1,47 @@
 import React, { Component } from 'react';
 import { View, Text, Dimensions, TouchableOpacity } from 'react-native';
-import Camera from 'react-native-camera';
+import { RNCamera } from 'react-native-camera';
 import styles from '../styles/style';
+import cameraStyle from '../styles/Camera';
 
 const { width } = Dimensions.get('window');
 export default class CameraClass extends Component {
 
-    async takePicture() {
+     takePicture= async (camera) => {
         try {
-        const data  = await this.camera.capture();
-        console.log('data captured', data);
+            const options = { quality: 0.5, base64: true };
+            const data = await this.camera.takePictureAsync(options);
+        console.log('data captured', data.uri);
         } catch (error){
             console.log('error', error);
         }
           
       }
 
+      readbarCode = (e) => {
+        console.log('barcode', e);
+      }
+
     render(){
         return(
-            <Camera
+            <RNCamera
                 ref={(cam) => {
                     this.camera = cam;
                 }}
                 style={styles.preview}
-                aspect={Camera.constants.Aspect.fill}>
-                {/* <Text style={styles.capture} onPress={this.takePicture.bind(this)}>
-                    [CAPTURE]
-                </Text> */}
-                <View style={{ height:width/2, width, backgroundColor: '#fff', justifyContent: 'center', alignItems: 'center' }}> 
+                type={RNCamera.Constants.Type.back}
+                flashMode={RNCamera.Constants.FlashMode.off}
+                onBarCodeRead={this.readbarCode}
+                >
+                <View style={cameraStyle.container}> 
                     <TouchableOpacity onPress={this.takePicture.bind(this)} activeOpacity={0.7}>
-                        <View style={{ width: width/3, height: width/3, borderRadius: width/3, backgroundColor: '#c9c9c9', justifyContent: 'center', alignItems: 'center' }}>
-                        <View style={{ width: width/5, height: width/5, borderRadius: width/5, backgroundColor: '#fff', justifyContent: 'center', alignItems: 'center' }} />
+                        <View style={cameraStyle.topLayerButton}>
+                        <View style={cameraStyle.innerLayerBtn} />
                         </View>
                     </TouchableOpacity>
                 </View>
 
-            </Camera>
+            </RNCamera>
         );
     }
 }
