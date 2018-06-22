@@ -1,7 +1,6 @@
 import React from 'react';
 import { View, Text, Image, TouchableOpacity  } from 'react-native';
 
-const img = require('../../assets/images/img.jpg');
 
 const Status = ({ item }) => (
     <View style={{ margin: 5, justifyContent: 'center', alignItems: 'center' }}>
