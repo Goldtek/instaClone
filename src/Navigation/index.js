@@ -69,7 +69,7 @@ export default createBottomTabNavigator({
         }
     }
 }, {
-    initialRouteName: 'Main',
+    initialRouteName: 'Profile',
     activeTintColor: 'black',
     inactiveTintColor: '#3e2465',
   });
